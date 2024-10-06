@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous"
+    />
+
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- External JavaScript -->
+    <script src="external.js" defer></script>
+
+    <title>Wonder Feed</title>
+</head>
+    
+  <body>
+    <div class="container">
+      <!--nav bar-->
+      <div class="top-bar">
+        <div class="row">
+          <div class="col-3 text-center">
+            <a href="home_page.html">WONDER FEED</a>
+          </div>
+          <!-- search bar -->
+          <div class="col-6 text-center d-flex justify-content-center">
+            <form class="form-inline" action="/search" method="get">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-dark" type="submit">Search</button>
+            </form>
+          </div>
+          <div class="col-3 justify-content-end">
+            <div class="menu">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--profile and info-->
+        <div class="my-info">
+            <div class="row"  >
+                <div class="col-2">
+                    <a href="profile.html">
+                        <img id="profile-pic" class="img-fluid" href="profile-img.jpg" src="profile-img.jpg" alt="Profile Picture">
+                    </a>
+                </div>
+                
+                <div class="col-10">
+                    <h1 class="text-center font-weight-bold">Ben Fullerton</h1>
+                    <!-- Button and textbox for bio -->
+                    <div class="form-group">
+                        <p id="bioText">This is my bio. Click the button to edit</p>
+                        <!-- Hidden  textarea that displays when click edit button -->
+                        <textarea id="userBio" class="form-control d-none" rows="2"></textarea>
+                        <!-- Hidden save btn that displays when click edit-->
+                        <button id="saveButton" type="button" class="btn btn-dark d-none" onclick="saveBio()" >Save</button>
+                        <!-- Edit button that shows textareaa and save-->
+                        <button id="editBioBtn" type="button" class="btn btn-dark" onclick="editBio()">Edit</button>
+                    </div>
+                </div>
+                
+
+
+
+        <!--friends and interests-->
+            <div class="row">
+                <div class="col-6">
+                    <h1>Friends</h1>
+                    <div class="row">
+                        <div class="col-3">
+                            <a href="profile.html">
+                                <img class="img-fluid max-width: 100%; height: auto;" src="profile-img.jpg" alt="Profile Picture" class="profile-img">
+                            </a>
+                            <p>ben fullerton</p>
+                        </div>
+                        <div class="col-3">
+                            <a href="profile.html">
+                                <img class="img-fluid max-width: 100%; height: auto;" src="profile-img.jpg" alt="Profile Picture" class="profile-img">
+                            </a>
+                            <p>ben fullerton</p>
+                        </div>
+                        <div class="col-3">
+                            <a href="profile.html">
+                                <img class="img-fluid max-width: 100%; height: auto;" src="profile-img.jpg" alt="Profile Picture" class="profile-img">
+                            </a>
+                            <p>ben fullerton</p>
+                        </div>
+                        <div class="col-3">
+                            <a href="profile.html">
+                                <img class="img-fluid max-width: 100%; height: auto;" src="profile-img.jpg" alt="Profile Picture" class="profile-img">
+                            </a>
+                            <p>ben fullerton</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h1>interests/favorites</h1>
+                </div>
+            </div>
+            <!-- recent posts-->
+            <div class="row">
+                <div class="col-4">
+                    <h1>recent text posts</h1>
+                    <p>Ben Fullerton: post number 1</p>
+                    <p>Ben Fullerton: post number 2</p>
+                    <p>Ben Fullerton: post number 3</p>
+                </div>
+                <div class="col-8">
+                    <h1>recent picture posts</h1>
+                    <div class="row">
+                        <div class="col-4">
+                            <a href="profile.html">
+                                <img class="img-fluid max-width: 100%; height: auto;" src="profile-img.jpg" alt="Profile Picture" class="profile-img">
+                            </a>
+                            <p>ben fullerton</p>
+                        </div>
+                        <div class="col-4">
+                            <a href="profile.html">
+                                <img class="img-fluid max-width: 100%; height: auto;" src="profile-img.jpg" alt="Profile Picture" class="profile-img">
+                            </a>
+                            <p>ben fullerton</p>
+                        </div>
+                        <div class="col-4">
+                            <a href="profile.html">
+                                <img class="img-fluid max-width: 100%; height: auto;" src="profile-img.jpg" alt="Profile Picture" class="profile-img">
+                            </a>
+                            <p>ben fullerton</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <!--
+    chatbox
+    <div class="chat">
+        <div class="header">
+            <h1>Chat</h1>
+            <h4>X</h4>
+        </div>
+        <div class="chatrow">Test</div>
+        <div class="chatrow">Test</div>
+        <div class="chatrow">Test</div>
+        <div class="chatrow">Test</div>
+        <div class="chatrow">Test</div>
+        <div class="chatrow">Test</div>
+        <div class="chatrow">Test</div>
+    </div>-->
+    </body>
+</html>

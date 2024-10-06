@@ -1,0 +1,256 @@
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #4f7dae;
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body a {
+  color: black;
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+ /*to see column and row
+.container, .row {
+    border: 2px solid black; 
+}
+
+[class^="col-"] {
+    border: 2px solid black;
+}
+.container {
+  position: relative;
+ }
+
+.container-fluid {
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+}*/
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  background-color: #ae804f;
+  z-index: 9;
+  border-radius: 10px;
+}
+/*
+.friend-sug-heading, .feed-heading, .stories-heading, .profile-heading {
+  background-color: #4fae80;
+  margin: 10px;
+}
+
+
+*/
+/*my profile pic*/
+.profile-img {
+  width: 120px; 
+  height: 120px; /* keep height same as width to maintain circular shape */
+  object-fit: cover; /*crop the img to fit*/
+}
+
+/*1st column nav bar*/
+.nav-bar-left {
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 5px;
+  margin-right: 30px;
+  margin-left: 30px;
+  font-size: 18px;
+}
+
+.navrow {
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin: 5px;
+}
+
+/*2nd col heading*/
+.feed-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feed-type {
+  display: flex;
+  gap: 10px;
+}
+
+
+/* profile pics*/
+.example-profile{
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+}
+
+.friend-sug .example-profile {
+  margin-right: 10px;
+}
+
+.friend-sug{
+  text-decoration: solid;
+}
+
+.posted-by {
+  display: flex;
+  align-items: center;
+}
+
+/*"say something box" */
+.post-box {
+  max-width: 600px;
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.post-caption, .likes-comments{
+  font-weight: bold;
+}
+
+.likes-comments img {
+  height: 15px;
+  width: 15px;
+  margin:2px;
+}
+
+/* background behind carousel - content is centered both hor and vert*/
+.post-1 {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.post-2 {
+  background-color: rgba(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+
+.carousel {
+  width: 450px;
+  width: 100%;
+}
+
+.carousel-item img {
+  border-radius: 20px;
+}
+#myCarousel img {
+  object-fit: cover;
+  height: 300px;
+}
+
+/*column 3*/
+
+.stories img {
+  border-radius: 20px;
+}
+
+.friend-sug {
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.comment-profile img {
+  height: 40px;
+  width: 40px;
+}
+
+.stories .user {
+  font-size: 12px;
+}
+
+
+.forums img {
+  height: 70px;
+  width: 70px;
+}
+
+.forum {
+  background-color: white;
+  border-radius: 20px;
+}
+
+/*profile page CSS*/
+
+#profile-pic {
+  height: auto;
+  width: auto;
+  max-height: 200px;
+  object-fit: cover; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* chat box*/
+.chat {
+  background-color: red;
+  height: 20vh;
+  min-height: 200px;
+  width: 20vw;
+  position: fixed;
+  bottom: 0;
+  right: 1rem;
+  border-radius: 10px 10px 0 0;
+  overflow: scroll;
+}
+
+.chat .header {
+  background-color: darkred;
+  color: white;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.chat .chatrow {
+  padding: 1rem;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: grey;
+}
+
+.chat .chatrow:nth-child(odd) {
+  background-color: lightgrey;
+}
